@@ -25,4 +25,4 @@ export const score = document.getElementById("score");
 export const targetDiana = document.getElementById("target-diana");
 
 export const treeTwoOneGo = new Audio;treeTwoOneGo.src = "Sounds/3-2-1-GO.mp3";
-export const tapSound = new Audio;tapSound.src = "Sounds/tapSound.mp3";
+export const tapSound = new Audio;tapSound.src = "Sounds/TapSound.mp3";
