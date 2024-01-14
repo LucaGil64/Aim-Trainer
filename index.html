@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aim Trainer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="icon" href="Images/icon.ico">
+</head>
+<body>
+    
+    <main id="main-container">
+        <h1>AIM TRAINER</h1>
+
+        <div id="options">
+            <h2>Options</h2>
+            <div id="mode">
+                <label for="">SELECT THE GAME-MODE</label>
+                <select class="select" name="game-mode" id="select-game-mode">
+                    <option value="tap">Tap</option>
+                    <option value="track">Track</option>
+                    <option value="maze">Maze</option>
+                </select>
+            </div>
+            <div id="difficulty">
+                <label for="">SELECT THE DIFFICULTY</label>
+                <select class="select" name="difficulty" id="select-difficulty">
+                    <option pixel="150" value="easy">Easy</option>
+                    <option pixel="120" value="medium">Medium</option>
+                    <option pixel="60" value="hard">Hard</option>
+                    <option pixel="30" value="impossible">Impossible</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="customize">
+            <h2>Customize</h2>
+            <div class="flex-separator">
+            <div id="cursor">
+                <label for="">SELECT THE CURSOR</label>
+                <select name="cursor" id="select-cursor">
+                    <option value="default">Default</option>
+                    <option value="crosshair">Cross</option>
+                    <option value="not-allowed">🛇</option>
+                    <option value="none"></option>
+                </select>
+            </div>
+            <div id="target">
+                <label for="">SELECT THE TARGET</label>
+                <select name="target" id="select-target">
+                    <option value="circle">Circle "O"</option>
+                    <option value="square">Square "◻"</option>
+                    <option value="triangle">Triangle "△"</option>
+                </select>
+            </div>
+            </div>
+        </div>
+
+        <div id="top-score">
+            <h2>Top-score</h2>
+            <div class="flex-separator">
+                <div id="top-score-difficulty">
+                    <h4>EASY</h4>
+                    <h4>MEDIUM</h4>
+                    <h4>HARD</h4>
+                    <h4>IMPOSSIBLE</h4>
+                </div>
+                <div id="top-score-score">
+                    <h4 id="score-easy">0</h4>
+                    <h4 id="score-medium">0</h4>
+                    <h4 id="score-hard">0</h4>
+                    <h4 id="score-impossible">0</h4>
+                </div>
+            </div>
+        </div>
+
+        <button id="play-button">PLAY</button>
+
+        <h6 id="tip"><i>TIP: IT'S BETTER TO PLAY IN FULL-SCREEN(PRESS F11)</i></h6>
+        <button id="reset-cookies">RESET COOKIES</button>
+    </main>
+
+    <div id="game-container">
+        <span id="counter-container">
+            <b id="counter-seconds">59</b>
+            <b id="counter-point">.</b>
+            <b id="counter-milliseconds">99</b>
+        </span>
+
+        <button id="click-me-to-start">CLICK ME TO START</button>
+
+        <span class="circle" id="target-diana"></span>
+    </div>
+    <b id="score">0</b>
+
+    <audio id="3-2-1-go" src="Sounds/3-2-1-GO.mp3" preload="auto"></audio>
+    <script type="module" src="main.js"></script>
+</body>
+</html>

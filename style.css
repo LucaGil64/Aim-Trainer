@@ -1,0 +1,236 @@
+:root{
+    font-family: system-ui, sans-serif;
+    color: #000;
+    user-select: none;
+}
+
+::-webkit-scrollbar{
+    padding: 0;
+    display: none;
+    position: relative;
+}
+
+body{
+    background-color: #222;
+}
+
+#main-container{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem;
+    margin: auto;
+    margin-top: 5dvh;
+    
+    width: 90dvw;
+    max-width: 400px;
+
+    background-color: #F3EEEA;
+    border-radius: .5rem;
+}
+
+h1{
+    text-align: center;
+}
+
+label,select{
+    font-weight: 500;
+}
+
+#options,#customize,#top-score{
+    height: 130px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+#cursor,#target{
+    display: flex;
+    flex-direction: column;
+}
+
+#cursor{
+    margin-right: 1rem;
+}
+
+.flex-separator{
+    display: flex;
+    justify-content: space-between;
+}
+
+#top-score-score,#top-score-difficulty{
+    font-size: 1.2em;
+}
+
+#play-button{
+    margin-bottom: 20px;
+
+    height: 2em;
+    width: 100%;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#tip{
+    position: absolute;
+    bottom: 5px;   
+    width: 90%;
+    text-align: center;
+}
+
+#reset-cookies{
+    position: absolute;
+    bottom: 20px;
+    width: 18%;
+
+    font-size: .5rem;
+    font-weight: 900;
+
+    align-self: flex-end;
+}
+
+/* GAME STARTS */
+
+#game-container{
+    display: none;
+    flex-direction: column;
+    opacity: 0;
+
+
+
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#counter-container{
+    color: white;
+
+    width: 8rem;
+    font-size: 2em;
+
+    position: fixed;
+    top: .5em;
+    left: calc(50dvw - 4rem);
+
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#click-me-to-start{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3em;
+    font-weight: 900;
+    width: 18rem;
+    height: 12rem;
+
+    position: fixed;
+    top: calc(50dvh - 6rem);
+    left: calc(50dvw - 9rem);
+}
+
+#score{
+    color: white;
+    font-size: 5em;
+
+    position: fixed;
+    right: .5rem;
+    bottom: .5rem;
+}
+
+#target-diana{
+    opacity: 0;
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.target-tap:active{
+    background: #f00;
+}
+.target-track:hover{
+    background: #f00;
+}
+.target-maze:hover{
+    background: #f00;
+}
+
+.circle{
+    border-radius: 100%;
+    
+    background: radial-gradient(circle, red 5%, red 10%, white 11%, white 25%, red 26%, red 40%, white 41%, white 55%, red 56%, red 70%, white 71%,white 85%,red 86%);
+}
+
+.square{
+    background-image: url("Images/Square.png");
+    background-size: cover;
+}
+
+.triangle {
+    background-color: white;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
+    background-image: url("Images/Triangle.png");
+    background-size: cover;
+}
+
+
+
+
+@keyframes disappear{
+    0%{
+       opacity: 100%;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+        display: flex;
+    }
+}
+
+@keyframes ready-set-go {
+    0%{
+        background-color: #f00;
+        color: #000;
+    }
+    32%{
+        background-color: #f00;
+    }
+    33%{
+        background-color: #ff0;
+    }
+    65%{
+        background-color: #ff0;
+    }
+    66%{
+        background-color: #0f0;
+    }
+    100%{
+        background-color: #0f0;
+        color: #000;
+    }
+}
